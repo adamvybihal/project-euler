@@ -1,6 +1,6 @@
 ﻿namespace project_euler.Test
 {
-	public class Tests
+	public class MultiplesOf3And5Test
 	{
 		public record MultiplesOf3And5TestCase(
 			uint InputNumber,
@@ -16,7 +16,7 @@
 			];
 
 		[TestCaseSource(nameof(testCases))]
-		public void MultiplesOf3And5Test(MultiplesOf3And5TestCase testCase)
+		public void MultiplesOf3And5ResultTest(MultiplesOf3And5TestCase testCase)
 		{
 			Assert.That(Functions.MultiplesOf3And5(testCase.InputNumber), Is.EqualTo(testCase.Result));
 		}
